@@ -1,0 +1,502 @@
+@import "_variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $third_color;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  border: 2px solid $primary_color;
+  padding: 10px 40px;
+  border-radius: 5px;
+  transition: background-color 0.6s;
+
+  &:hover {
+    background-color: $primary_color;
+  }
+}
+
+hr {
+  border: 1px solid $primary_color;
+  width: 20%;
+  margin: 20px auto;
+}
+
+@import "./layout/navigation";
+@import "./layout/header";
+
+/*About end*/
+#about {
+  padding: 70px 0;
+  color: $second_color;
+
+  .title {
+    text-align: center;
+  }
+
+  .content {
+    margin-top: 20px;
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+
+    .content-text {
+      margin-left: 20px;
+
+      li {
+        margin-bottom: 25px;
+
+        i {
+          color: $primary_color;
+          margin-right: 5px;
+        }
+      }
+
+      p {
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+/*About end*/
+
+/*Cards start*/
+#cards {
+  padding: 70px 0;
+  color: $second_color;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      width: 33%;
+      height: 300px;
+      text-align: center;
+
+      a {
+        color: $second_color;
+        font-weight: bold;
+        font-size: 20px;
+        transition: color 0.6s;
+
+        &:hover {
+          color: $primary_color;
+        }
+      }
+
+      p {
+        margin: 5px 0 25px 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .btn {
+        border: 2px solid $second_color;
+        color: $second_color;
+        transition: border 0.6s;
+
+        &:hover {
+          border-color: $primary_color;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+/*Cards end*/
+
+/*Services start*/
+#services {
+  background-color: $fouth_color;
+  color: $second_color;
+  margin-top: 70px;
+  padding: 70px 0;
+
+  .title {
+    text-align: center;
+
+    h2 {
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      display: flex;
+      width: 49%;
+      border-radius: 10px;
+      background-color: $third_color;
+      padding: 30px;
+      margin: 10px 0;
+      height: 140px;
+
+      h4 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        transition: color 0.6s;
+
+        &:hover {
+          color: $primary_color;
+        }
+      }
+
+      i {
+        color: $primary_color;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+/*Services end*/
+
+/*Cta start*/
+#cta {
+  background-image: url(../../images/cta-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+
+  .title {
+    color: #f0f4f4;
+    text-align: center;
+
+    h2 {
+      font-size: 25px;
+    }
+
+    p {
+      margin: 20px 0 40px 0;
+      font-size: 20px;
+    }
+
+    .btn {
+      border: 2px solid #fff;
+
+      &:hover {
+        border-color: $primary_color;
+      }
+    }
+  }
+}
+
+/*Cta end*/
+
+/*Start start*/
+#portfolio {
+  .title {
+    text-align: center;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .portfolio-filter {
+    background-color: $primary_color;
+    width: max-content;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+
+    ul {
+      display: flex;
+
+      li {
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.6s;
+
+        &:hover {
+          background-color: $third_color;
+
+          a {
+            color: #00c1c1;
+          }
+        }
+      }
+    }
+  }
+
+  .portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      width: 32%;
+      height: 300px;
+      margin-top: 20px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+      }
+
+      .info {
+        position: absolute;
+        background-color: $fouth_color;
+        opacity: 0.6;
+        bottom: 20px;
+        left: 30px;
+        right: 30px;
+        border-radius: 10px;
+        padding: 10px;
+        height: 90px;
+        transition: bottom ease-in-out 0.6s;
+        visibility: hidden;
+
+        h4 {
+          margin-bottom: 5px;
+          font-size: 25px;
+        }
+
+        a {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          color: $second_color;
+        }
+
+        .i02 {
+          right: 10px;
+        }
+      }
+
+      &:hover .info {
+        bottom: 50px;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+/*Portfolio end*/
+
+/*Pricing start*/
+#pricing {
+  background-color: $fouth_color;
+  padding: 70px 0;
+  color: $second_color;
+  text-align: center;
+  .title {
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .prices {
+    display: flex;
+    justify-content: space-between;
+    .price {
+      width: 32%;
+      background-color: $third_color;
+      border: 2px solid #e5eeee;
+      border-radius: 10px;
+      height: 400px;
+      line-height: 40px;
+      padding: 30px 0;
+      margin-top: 40px;
+      h3 {
+        color: $primary_color;
+        font-size: 30px;
+      }
+      span {
+        color: $second_color;
+        font-size: 20px;
+        opacity: 0.6;
+      }
+      a {
+        background-color: $primary_color;
+        &:hover {
+          background-color: #019292;
+        }
+      }
+
+      &:nth-child(2) {
+        background-color: $primary_color;
+        color: $third_color;
+        h3 {
+          color: $third_color;
+          span {
+            color: $third_color;
+          }
+        }
+        a {
+          background-color: $third_color;
+          color: $primary_color;
+        }
+      }
+    }
+  }
+}
+/*Pricing end*/
+
+/*Team start*/
+#team {
+  background-color: $fouth_color;
+  padding: 70px 0;
+  color: $second_color;
+  text-align: center;
+  .title {
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .members {
+    display: flex;
+    justify-content: space-between;
+    .member {
+      position: relative;
+      background-color: $third_color;
+      width: max-content;
+      width: 24%;
+      border: 2px solid #e5eeee;
+      border-radius: 10px;
+      line-height: 30px;
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      h4 {
+        opacity: 0.4;
+      }
+      .social {
+        position: absolute;
+        width: 100%;
+        bottom: 80px;
+        display: flex;
+        justify-content: center;
+        transition: bottom 0.6s;
+        visibility: hidden;
+        i {
+          background-color: $primary_color;
+          color: $third_color;
+          padding: 10px;
+          margin-right: 15px;
+          border-radius: 50%;
+          font-size: 15px;
+        }
+      }
+      &:hover .social {
+        bottom: 60px;
+        visibility: visible;
+      }
+    }
+  }
+}
+/*Team end*/
+
+/*Contact start*/
+#contact {
+  background-color: $fouth_color;
+  padding: 70px 0;
+  color: $second_color;
+  text-align: center;
+  .title {
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-top: 20px;
+    i {
+      color: $primary_color;
+    }
+    .inf {
+      background-color: $third_color;
+      padding: 20px 0;
+      width: 24%;
+      border: 2px solid #e5eeee;
+      border-radius: 5px;
+      line-height: 40px;
+      margin-bottom: 20px;
+      &:nth-child(1) {
+        width: 50%;
+      }
+      &:nth-child(4) {
+        padding: 0;
+        width: 50%;
+      }
+      &:nth-child(5) {
+        padding: 0;
+        width: 49%;
+        padding: 20px;
+        input {
+          padding: 20px;
+          border: 1px solid #e5eeee;
+          outline-color: $primary_color;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3) {
+            width: 100%;
+          }
+        }
+        textarea {
+          width: 100%;
+          padding: 20px;
+          border: 2px solid #e5eeee;
+        }
+        a {
+          background-color: $primary_color;
+        }
+      }
+    }
+  }
+}
+/*Contact end*/
+
+@import "./layout/footer";
